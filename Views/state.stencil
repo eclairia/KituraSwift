@@ -1,0 +1,13 @@
+<html>
+<meta><title>Kitura!</title></meta>
+<body>
+<center>
+    <form method='post' action='/insert_user'>
+        <label>Name</label>
+        <input name='name'>
+        <label>Password</label>
+        <input type="password" name='password'>
+        <input type='submit' value='Insert a user'>
+    </form></center><p>
+</body>
+</html>
