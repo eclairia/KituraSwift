@@ -211,7 +211,6 @@ router.post("/insert_message") { request, response, next in
         return
     }
     
-    let users_id = data["id_user"]
     let content = data["content"]
     
     connection.connect() { error in
@@ -220,7 +219,7 @@ router.post("/insert_message") { request, response, next in
             return
         }
         else {
-            let query = Insert(into: messages, valueTuples: [(messages.users_id, users_id), (messages.content, content)])
+            let query = Insert(into: messages, valueTuples: [(messages.content, content)])
             connection.execute(query: query) {
                 result in
                 print(query)

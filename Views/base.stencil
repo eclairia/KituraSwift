@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a href="/" class="navbar-brand">Chat</a>
+        <a href="/add_user" class="navbar-brand">Add a user</a>
+        <a href="/add_message" class="navbar-brand">Add a message</a>
+    </nav>
+
+    <div class="container">
+        <br />
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

@@ -1,14 +1,11 @@
-<html>
-<meta><title>Kitura!</title></meta>
-    <body>
-        <center>
-            <form method='post' action='/insert_message'>
-                <label>Id utilisateur</label>
-                <input name='id_user'>
-                <label>Message</label>
-                <input name='content'>
-                <input type='submit' value='Insert a message'>
-            </form>
-        </center><p>
-    </body>
-</html>
+{% extends "base.stencil" %}
+
+{% block content %}
+    <center>
+        <form method='post' action='/insert_message'>
+            <p><label>Message</label>
+            <input name='content'></p>
+            <input type='submit' class='btn btn-primary' value='Insert a message'>
+        </form>
+    </center><p>
+{% endblock %}
